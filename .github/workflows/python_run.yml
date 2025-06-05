@@ -31,3 +31,9 @@ jobs:
 
     - name: Run script
       run: python q1q2.py
+
+    - name: Upload plots as artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: plots
+        path: '*.png'
