@@ -32,6 +32,9 @@ jobs:
     - name: Run script
       run: python q1q2.py
 
+    - name: List files for debugging
+      run: ls -al
+
     - name: Upload plots as artifacts
       uses: actions/upload-artifact@v2
       with:
