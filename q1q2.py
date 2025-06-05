@@ -93,6 +93,8 @@ def main():
     plt.figure(figsize=(9,6))
     plot_temperature_time_series(time_daily, T_daily, "Q1(a): Surface Temperature over 50 Years (daily time steps)")
     plt.show()
+    plt.savefig("Surface Temperature over 50 Years.png")
+    plt.close()
 
     # === Q1(b): Yearly Time Steps ===
 
@@ -106,6 +108,8 @@ def main():
     plt.figure(figsize=(9,6))
     plot_temperature_time_series(time_yearly, T_yearly, "Q1(b): Surface Temperature over 50 Years (yearly time steps)")
     plt.show()
+    plt.savefig("Surface Temperature over 50 Years.png")
+    plt.close()
 
     print(f"Part(b) completed in {time.time() - t2:.2f} seconds")
 
@@ -116,6 +120,9 @@ def main():
     plot_temperature_time_series(time_yearly, T_yearly, "Q1(a) vs Q1(b): Daily vs. Yearly Time Steps Comparison", label='Yearly Steps') # Plot yearly data on the same figure
     plt.legend() # Add a legend to distinguish the lines
     plt.show() # Display the combined plot
+    plt.savefig("Daily vs. Yearly Time Steps Comparison.png")
+    plt.close()
+    
 
     # === Question 1, Part(c): Equilibrium Temperature for Variable S ===
 
@@ -137,6 +144,8 @@ def main():
     plt.figure(figsize=(9,6))
     plot_equilibrium_vs_solar(S_values, T_eq, title="Q1(c): Equilibrium Temperature vs Solar Constant")
     plt.show()
+    plt.savefig("Equilibrium Temperature vs Solar Constant.png")
+    plt.close()
 
     # === Question 2, Part(b): Equilibrium Temperature for Variable S ===
 
@@ -158,6 +167,8 @@ def main():
     # For plotting
     plot_equilibrium_vs_solar(S_values3, T_eq3, title="Q2(b) & Q2(c): Hysteresis", label="Warming")
     plt.show()
+    plt.savefig("Hysteresis.png")
+    plt.close()
 
     # Report total runtime
     print(f"Total execution time: {time.time() - start_time:.2f} seconds")
